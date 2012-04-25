@@ -9,7 +9,7 @@ smcFanControl fork from http://www.eidac.de/ to make certain Mac models work
 
 ## F.A.Q
 
-Please take a look at F.A.Q.rtf
+Please take a look at F.A.Q.txt
 
 ## About
 

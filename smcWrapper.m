@@ -22,7 +22,11 @@
 
 #import "smcWrapper.h"
 
-NSString * const smc_checksum=@"75a31ec0a358ae4efcb9835660b453a44eef6e3";
+//NSString * const smc_checksum=@"75a31ec0a358ae4efcb9835660b453a44eef6e3";
+NSString * const smc_checksum=@"e3128944d157c4a7cdb5b31bd58d231ea949f6";
+
+
+extern UInt32 _strtoul(char *str, int size, int base);
 
 @implementation smcWrapper
 	io_connect_t conn;

@@ -26,7 +26,7 @@
 #import <Security/Authorization.h>
 #import <Security/AuthorizationDB.h>
 #import <Security/AuthorizationTags.h>
-#import <Sparkle/SUUpdater.h>
+#import "Sparkle.framework/Headers/SUUpdater.h"
 #import "SystemVersion.h"
 
 @implementation FanControl

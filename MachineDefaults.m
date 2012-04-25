@@ -27,8 +27,13 @@
 
 
 - (id)init:(NSString*)p_machine{
-	machine=[MachineDefaults computerModel];
-	supported_machines=[[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Machines" ofType:@"plist"]];
+    self = [super init];
+    if (self) {
+        
+        machine=[MachineDefaults computerModel];
+        supported_machines=[[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Machines" ofType:@"plist"]];
+    }
+    
 	return self;
 }
 

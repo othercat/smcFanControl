@@ -29,13 +29,26 @@
 		89949E8D0AEEA37700077E93 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = 89949E8C0AEEA37700077E93 /* Power.m */; };
 		89B243200B7E351000CAD103 /* smcfancontrol_v2.icns in Resources */ = {isa = PBXBuildFile; fileRef = 89B2431F0B7E351000CAD103 /* smcfancontrol_v2.icns */; };
 		89C053BE0ADAB7630037CA16 /* smc.c in Sources */ = {isa = PBXBuildFile; fileRef = 89C053BC0ADAB7630037CA16 /* smc.c */; };
-		89E076E80ADD03C3005C1879 /* smc in Resources */ = {isa = PBXBuildFile; fileRef = 89E076E70ADD03C3005C1879 /* smc */; };
 		89E7D3650ADE819B000F67AB /* Machines.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89E7D3640ADE819B000F67AB /* Machines.plist */; };
 		89FE24230B7F4CD300D2713C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 89FE24210B7F4CD300D2713C /* MainMenu.nib */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		C6F42F3F15479EA40083307B /* smcover.png in Resources */ = {isa = PBXBuildFile; fileRef = 89559A830BAC338400DBA37E /* smcover.png */; };
+		EFD0297D15C0F1A0002AD04D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD0297C15C0F1A0002AD04D /* Foundation.framework */; };
+		EFD0298615C0F1E9002AD04D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD0298515C0F1E9002AD04D /* IOKit.framework */; };
+		EFD0298815C0F296002AD04D /* smc_main.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD0298315C0F1D1002AD04D /* smc_main.c */; };
+		EFD0298A15C0F31C002AD04D /* smc in Resources */ = {isa = PBXBuildFile; fileRef = EFD0297A15C0F1A0002AD04D /* smc */; };
+		EFFFEA5715C0E19D004FFFDE /* ZNLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFFEA5615C0E19D004FFFDE /* ZNLog.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFD0298B15C0F33F002AD04D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD0297915C0F1A0002AD04D;
+			remoteInfo = smc;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		895BDA550B8F90D3003CD894 /* CopyFiles */ = {
@@ -48,14 +61,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89B156840BA411BF002A258A /* CopyFiles */ = {
+		EFD0297815C0F1A0002AD04D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -94,12 +107,17 @@
 		89B2431F0B7E351000CAD103 /* smcfancontrol_v2.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = smcfancontrol_v2.icns; sourceTree = "<group>"; };
 		89C053BC0ADAB7630037CA16 /* smc.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = smc.c; sourceTree = "<group>"; };
 		89C053BD0ADAB7630037CA16 /* smc.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
-		89E076E70ADD03C3005C1879 /* smc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = smc; sourceTree = "<group>"; };
 		89E7D3640ADE819B000F67AB /* Machines.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Machines.plist; sourceTree = "<group>"; };
 		89FE24050B7F4C2B00D2713C /* paypal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = paypal.gif; sourceTree = "<group>"; };
 		89FE24220B7F4CD300D2713C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* smcFanControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smcFanControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD0297A15C0F1A0002AD04D /* smc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = smc; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD0297C15C0F1A0002AD04D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFD0298315C0F1D1002AD04D /* smc_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smc_main.c; sourceTree = SOURCE_ROOT; };
+		EFD0298515C0F1E9002AD04D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		EFFFEA5515C0E19D004FFFDE /* ZNLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZNLog.h; path = ../../../IACSource/MyUtilities/Cocoa/ZNLog.h; sourceTree = "<group>"; };
+		EFFFEA5615C0E19D004FFFDE /* ZNLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZNLog.m; path = ../../../IACSource/MyUtilities/Cocoa/ZNLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +135,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFD0297715C0F1A0002AD04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD0298615C0F1E9002AD04D /* IOKit.framework in Frameworks */,
+				EFD0297D15C0F1A0002AD04D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EFFFEA5515C0E19D004FFFDE /* ZNLog.h */,
+				EFFFEA5615C0E19D004FFFDE /* ZNLog.m */,
 				89C053BC0ADAB7630037CA16 /* smc.c */,
 				89C053BD0ADAB7630037CA16 /* smc.h */,
 				894A465F0ADBD6CF008785F3 /* FanControl.h */,
@@ -169,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* smcFanControl.app */,
+				EFD0297A15C0F1A0002AD04D /* smc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +209,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				EFD0297E15C0F1A0002AD04D /* smc */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -206,7 +237,6 @@
 				8936F8FF0AF2BB3800543DBD /* smc_loginitem_remove.scpt */,
 				8917FB850ADEECAD00443DA1 /* paypal.gif */,
 				89E7D3640ADE819B000F67AB /* Machines.plist */,
-				89E076E70ADD03C3005C1879 /* smc */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				893506170B440255001BFBA5 /* Localizable.strings */,
 				89FE24050B7F4C2B00D2713C /* paypal.gif */,
@@ -218,9 +248,19 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				EFD0297C15C0F1A0002AD04D /* Foundation.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFD0297E15C0F1A0002AD04D /* smc */ = {
+			isa = PBXGroup;
+			children = (
+				EFD0298515C0F1E9002AD04D /* IOKit.framework */,
+				EFD0298315C0F1D1002AD04D /* smc_main.c */,
+			);
+			path = smc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +274,12 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				895BDA550B8F90D3003CD894 /* CopyFiles */,
-				89B156840BA411BF002A258A /* CopyFiles */,
+				EFCC8C6B15C0E84F00AA5707 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EFD0298C15C0F33F002AD04D /* PBXTargetDependency */,
 			);
 			name = smcFanControl;
 			productInstallPath = "$(HOME)/Applications";
@@ -246,13 +287,30 @@
 			productReference = 8D1107320486CEB800E47090 /* smcFanControl.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EFD0297915C0F1A0002AD04D /* smc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD0298115C0F1A0002AD04D /* Build configuration list for PBXNativeTarget "smc" */;
+			buildPhases = (
+				EFD0297615C0F1A0002AD04D /* Sources */,
+				EFD0297715C0F1A0002AD04D /* Frameworks */,
+				EFD0297815C0F1A0002AD04D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = smc;
+			productName = smc;
+			productReference = EFD0297A15C0F1A0002AD04D /* smc */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FanControl" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,6 +331,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* smcFanControl */,
+				EFD0297915C0F1A0002AD04D /* smc */,
 			);
 		};
 /* End PBXProject section */
@@ -282,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD0298A15C0F31C002AD04D /* smc in Resources */,
 				8936F91E0AF2BB8C00543DBD /* smc_loginitem.scpt in Resources */,
 				8936F91F0AF2BB9200543DBD /* smc_loginitem_remove.scpt in Resources */,
-				89E076E80ADD03C3005C1879 /* smc in Resources */,
 				89E7D3650ADE819B000F67AB /* Machines.plist in Resources */,
 				8917FB860ADEECAD00443DA1 /* paypal.gif in Resources */,
 				893506180B440255001BFBA5 /* Localizable.strings in Resources */,
@@ -293,11 +352,26 @@
 				89033CA70B80E1EB00FDAF43 /* F.A.Q.rtf in Resources */,
 				8987FBD20B878B3900A5ED8E /* smc.png in Resources */,
 				89559A840BAC338500DBA37E /* smcover.png in Resources */,
-				C6F42F3F15479EA40083307B /* smcover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EFCC8C6B15C0E84F00AA5707 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /usr/local/bin/plistVersionIncrement.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -312,10 +386,27 @@
 				89949E8D0AEEA37700077E93 /* Power.m in Sources */,
 				892A7F450B10B7700041B493 /* MachineDefaults.m in Sources */,
 				8932CF2413D08551008BC447 /* SystemVersion.m in Sources */,
+				EFFFEA5715C0E19D004FFFDE /* ZNLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD0297615C0F1A0002AD04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD0298815C0F296002AD04D /* smc_main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFD0298C15C0F33F002AD04D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD0297915C0F1A0002AD04D /* smc */;
+			targetProxy = EFD0298B15C0F33F002AD04D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		89033CA60B80E1EB00FDAF43 /* F.A.Q.rtf */ = {
@@ -349,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					".//**",
@@ -358,13 +450,15 @@
 				GCC_MODEL_PPC64 = NO;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FanControl_Prefix.pch;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = smcFanControl;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -374,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
@@ -382,13 +477,15 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_2 = "\"$(SRCROOT)\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FanControl_Prefix.pch;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = smcFanControl;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -429,6 +526,53 @@
 			};
 			name = Release;
 		};
+		EFD0297F15C0F1A0002AD04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFD0298015C0F1A0002AD04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,6 +590,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD0298115C0F1A0002AD04D /* Build configuration list for PBXNativeTarget "smc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD0297F15C0F1A0002AD04D /* Debug */,
+				EFD0298015C0F1A0002AD04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

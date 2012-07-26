@@ -109,7 +109,7 @@
 
 -(void)terminate:(id)sender;
 
--(void)paypal:(id)sender;
+- (IBAction)paypal:(id)sender;
 - (IBAction)visitHomepage:(id)sender;
 
 - (IBAction)closePreferences:(id)sender;

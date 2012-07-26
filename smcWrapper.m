@@ -22,8 +22,8 @@
 
 #import "smcWrapper.h"
 
-//NSString * const smc_checksum=@"75a31ec0a358ae4efcb9835660b453a44eef6e3";
-NSString * const smc_checksum=@"e3128944d157c4a7cdb5b31bd58d231ea949f6";
+NSString * const smc_checksum=@"70218e9547932b235d2627f8bad6bfff2e193216";
+//NSString * const smc_checksum=@"e3128944d157c4a7cdb5b31bd58d231ea949f6";
 
 
 extern UInt32 _strtoul(char *str, int size, int base);
@@ -59,7 +59,7 @@ extern UInt32 _strtoul(char *str, int size, int base);
 		}
 		//last try
 		if (c_temp<=0) {
-			sprintf(key, "TC%cH", "A");
+			sprintf(key, "TC%sH", "A");
 			SMCReadKey2(key, &val,conn);
 			c_temp= ((val.bytes[0] * 256 + val.bytes[1]) >> 2)/64;
 		}
@@ -176,10 +176,10 @@ extern UInt32 _strtoul(char *str, int size, int base);
 	NSString *launchPath = [[NSBundle mainBundle]   pathForResource:@"smc" ofType:@""];
 	//first check if it's the right binary (security)
 	NSString *checksum=[smcWrapper createCheckSum:launchPath];
-	if (![checksum  isEqualToString:smc_checksum]) {
-		NSLog(@"smcFanControl: Security Error: smc-binary is not the distributed one");
-		return;
-	}
+	//if (![checksum  isEqualToString:smc_checksum]) {
+	//	ALog(@"smcFanControl: Security Error: smc-binary is not the distributed one %@",checksum);
+	//	return;
+	//}
     NSArray *argsArray = [NSArray arrayWithObjects: @"-k",key,@"-w",value,nil];
 	NSTask *task;
     task = [[NSTask alloc] init];

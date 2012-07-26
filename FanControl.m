@@ -29,6 +29,7 @@
 #import "Sparkle.framework/Headers/SUUpdater.h"
 #import "SystemVersion.h"
 
+extern kern_return_t SMCClose(io_connect_t conn);
 @implementation FanControl
 
 io_connect_t conn;
@@ -160,7 +161,7 @@ NSString *authpw;
 	[s_menus autorelease];
 	int i;
 	for(i=0;i<[smcWrapper get_fan_num];i++){
-		NSMenuItem *mitem=[[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Fan: %d",i] action:NULL keyEquivalent:[NSString stringWithString:@""]];
+		NSMenuItem *mitem=[[NSMenuItem alloc] initWithTitle:[NSString stringWithFormat:@"Fan: %d",i] action:NULL keyEquivalent:@""];
 		[mitem setTag:(i+1)*10];
 		[s_menus insertObject:mitem atIndex:i];
 		[mitem release];
@@ -422,7 +423,7 @@ NSString *authpw;
 	[FanControl setRights];
 	[FavoritesController setSelectionIndex:cIndex];
 	for (i=0;i<[[[[FavoritesController arrangedObjects] objectAtIndex:cIndex] objectForKey:@"FanData"] count];i++) {
-		//NSLog(@"Value:%@ and i: %i",[[[FanController arrangedObjects] objectAtIndex:i] objectForKey:@"selspeed"],i);
+		ALog(@"Value:%@ and i: %i",[[[FanController arrangedObjects] objectAtIndex:i] objectForKey:@"selspeed"],i);
 		[smcWrapper setKey_external:[NSString stringWithFormat:@"F%dMn",i] value:[[[[FanController arrangedObjects] objectAtIndex:i] objectForKey:@"selspeed"] tohex]];
 	}
 	NSMenu *submenu = [[[NSMenu alloc] init] autorelease];
@@ -637,6 +638,7 @@ NSString *authpw;
 	NSFileManager *fmanage=[NSFileManager defaultManager];
 	NSDictionary *fdic=[fmanage fileAttributesAtPath:smcpath traverseLink:NO];
 	if ([[fdic valueForKey:@"NSFileOwnerAccountName"] isEqualToString:@"root"] && [[fdic valueForKey:@"NSFileGroupOwnerAccountName"] isEqualToString:@"admin"] && ([[fdic valueForKey:@"NSFilePosixPermissions"] intValue]==3437)) {
+        DLog(@"%@",fdic);
 		return;
 	 } 
 	FILE *commPipe;
